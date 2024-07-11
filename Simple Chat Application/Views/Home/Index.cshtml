@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="container">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" id="userInput" placeholder="Enter Username">                   
+                </div>
+                <button class="btn btn-primary" id="connectButton" disabled>Connect</button>
+
+                <!-- Hidden initially -->
+                <div class="mb-3" id="messageSection" style="display: none;">
+                    <br />
+                    <label class="form-label">Message</label>
+                    <input type="text" class="form-control" id="messageInput" placeholder="Enter Message">
+                </div>
+                <button class="btn btn-primary" type="submit" id="sendButton" style="display: none;" disabled>Send Message</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="container">
+                <h2>Connected User: </h2>
+                <ul id="connectedUsersList"></ul>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="container">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="container">
+                <h2 id="previousChatHeading" style="display: none;"></h2>
+                <ul id="retrieveMessages"></ul>
+            </div>
+        </div>
+    </div>
+</div>
